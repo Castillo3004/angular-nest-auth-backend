@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  db:
+    container_name: mean-db #El nombre que se le quiere dar
+    image: mongo:5.0.16  #Version que se encuentra en hubdocker
+    volumes:
+      - ./mongo:/data/db
+    ports:
+      - 27017:27017
+    restart: always    
+    
